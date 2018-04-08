@@ -1,0 +1,62 @@
+.wrapper-basket-first-step{
+ 	padding: 83px 0px 63px 0px; 
+}
+.basket-first-step__table{
+	width: 100%;
+	border-spacing: 0px;
+}
+.basket-first-step__line{
+	height: 156px;
+
+}
+.basket-first-step__cell-head{
+	font-size: 12px;
+	color: #9fa3a7;
+	vertical-align: bottom;
+	font-weight: bold;
+}
+.basket-first-step__line > td{
+	border-bottom: solid 1px #e8e9ed;
+}
+.basket-first-step__line-head > td{
+	border-bottom: solid 1px #e8e9ed;
+	padding-bottom: 17px;
+}
+.basket-first-step__img{
+	width: 116px;
+    height: 87px;
+}
+.delete{
+	width: 14px;
+	height: 14px;
+}
+.basket-first-step__cell-name-app{
+	color: #2c2c2c;
+	font-size: 22px;
+	padding-bottom: 11px;
+}
+.basket-first-step__cell-cast{
+	color: #212121;
+	font-size: 16px;
+
+}
+.button-delete{
+	background-color: #ffffff;
+	border-color: #ffffff;
+	border: 0px;
+	width: 14px;
+	height: 14px;
+}
+
+.basket-first-step__total-cost{
+	font-size: 36px;
+	color: #292929;
+	padding-right: 68px;
+}
+.basket-first-step__total-cost > sup{
+	color: #9fa3a7;
+	font-size: 19px;
+}
+.basket-first-step__buy{
+	text-align: right;
+}

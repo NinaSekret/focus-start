@@ -1,0 +1,129 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background-color: #ffffff;
+	line-height: 1.4;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	
+
+}
+.wrapper-basket{
+	padding: 60px 80px 130px 80px;
+	max-width: 1280px;
+	min-width: 750px;
+	margin: 0 auto;
+}
+.wrapper-basket-timeline{	
+	text-align: center;
+    position: relative;
+    width: 90%;
+    margin: 0 auto; 
+    min-width: 590px
+}
+.credit-card{
+	width: 55%;
+    margin: 0 auto; 
+    min-width: 590px
+}
+.form-credit-card{
+	position: relative;
+	width: 430px;
+	height: 260px;
+	border: solid 2px #d8d8d8;
+	border-radius: 5px;
+}
+.form-credit-card__main-window{
+	background-color: #ffffff;
+	top: 154px;
+	z-index: 3;
+	padding: 32px 32px 30px 25px;
+
+}
+.form-credit-card__secondary-window{
+	bottom: 65px;
+	left: 115px;
+	z-index: 1;
+	background-color: #fafafa;
+	border: solid 1px #e8e9ed;
+	padding-top: 35px;
+
+}
+.form-credit-card__img{
+	float: right;
+	line-height: 3;
+	width: 62px;
+}
+.form-credit-card__img-master-card{
+	width: 62px;
+	height: 38px; 
+}
+.form-credit-card__img-visa{
+	width: 58px;
+	height: 20px;
+}
+.form-credit-card__img .form-credit-card__main-window-input-year .form-credit-card__secondary-window-form:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.form-credit-card__main-window-input-namber-card{
+	padding-right: 57px;	
+}
+.form-credit-card__main-window-date{
+	width: 248px;
+	padding: 19px 0px 42px;
+}
+.form-credit-card__main-window-input-month{
+	width: 115px;
+}
+.form-credit-card__main-window-input-year{
+	float: right;
+	width: 115px;
+}
+.form-credit-card__main-window-input-owner{
+	width: 370px;
+	text-overflow: clip;
+}
+
+.form-credit-card__secondary-window-line{
+	height: 39px;
+	width: 429px;
+	background-color: #e8e9ed;
+}
+.form-credit-card__secondary-window-form{
+	float: right;
+	padding: 10px 27px 0px 0px;
+	width: 104px;	
+}
+.form-credit-card__secondary-window-input-cvv{
+	width: 76px;
+}
+.form-credit-card__secondary-window-text{
+	padding-top: 10px;
+	font-size: 12px;
+	color: #c8c8c8;
+}
+.form-credit-card__button-white{
+	float: left;
+}
+.form-credit-card__button-blue{
+	float: right;
+}
+.wrapper-basket-credit-card-button{
+	width: 75%;
+    margin: 0 auto; 
+    min-width: 590px
+
+}
+.wrapper-basket-credit-card-button:after{
+	content: "";
+	display: block;
+	clear: both;
+}

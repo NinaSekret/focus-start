@@ -1,0 +1,172 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background-color: #f1f1f1;
+	line-height: 1.4;
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+:focus {
+	outline:none;
+}
+
+.header{
+	background-color: #ffffff;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+	min-width: 1220px;
+}
+.wrapper-header {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.header .wrapper-header:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.header {
+	padding:22px 0;
+}
+
+.menu-component{
+	display:inline-block;
+	padding-left:40px;
+	color: #adafb2;
+	text-decoration: none;
+}
+.menu{
+	padding:22px 0;
+	float:right;
+}
+.logo{
+	float:left;	
+}
+.logo > svg {
+  width: 145px;
+  height: 60px;
+}
+.menu-component:hover{
+	color: #ed1b2f;
+}
+
+.wrapper{
+	width: 1220px;
+	padding: 0 20px;
+	margin: 50px auto 97px;
+}
+.wrapper-inner-main{
+	padding: 45px 62px 63px 62px;
+	background-color: #ffffff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.18);
+
+}
+.app-pack{
+	padding-bottom: 62px;
+}
+.app-pack__search{
+	float:right;
+}
+.app-pack__title{
+	float:left;
+}
+.input-text-search{
+ background:url(./../assets/img/svg/loupe.svg) no-repeat 50% 50%;
+ background-position: 95% 50%;
+}	
+.app-pack__header{
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: solid 1px #d8d8d8;	
+}
+.caption{
+	font-weight: normal;
+	color: #32393d;
+}
+.caption--h3{
+	font-size: 22px;
+}
+.caption--h4{
+	font-size: 20px;
+}
+.app-pack__header:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.app-threads-type__header:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.app-pack__icon-image{
+	display: inline-block;
+	padding: 26px 34 0 0;
+	margin-left: -2px;
+}
+.app-pack__icon-image > img{
+	width: 328px;
+	height: 196;
+	padding-bottom: 17px;
+}
+.app-pack__icon-image:last-child{
+	padding-right: 0;
+}
+.time{
+	font-size: 16px;
+	color: #adafb2;
+}
+.app-threads-type{ 
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 42px;
+}
+.app-threads-type:last-child{
+	padding-right: 0px;
+}
+.app-threads-type__header{
+	width: 484;
+	border-bottom: solid 1px #d8d8d8;
+	padding-bottom: 19px;
+}
+.app-threads-type__title{
+	float: left;
+}
+.app-threads-type__arrow{
+	float: right;
+	padding:7px 5px;
+}
+.app-threads-type__arrow:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.arrow--grey{
+	fill: #d8d8d8;
+}
+.app-threads-type__list{
+	padding-left: 33px;
+	color: #4d5762;
+	font-size: 20px;
+}
+.app-threads-type__list > li{	
+	padding: 42px 0 0 7;
+}
+.app-threads-type__list > li > p{
+	color: #adafb2;
+	padding-top: 5px;
+}
+.app-threads-type__list--multi-app > li{
+	list-style-image: url(./../assets/img/svg/work-icon.svg);
+}
+.app-threads-type__list--mono-app > li{
+	list-style-image: url(./../assets/img/svg/education-icon.svg);
+}
+.app-threads-type__list > li > p:hover{
+	color: #ed1b2f;
+}

@@ -1,0 +1,45 @@
+
+.basket-contact-info{
+	width: 65%;
+	min-width: 500px;
+	padding-right: 70px;
+	float: left;
+}
+.wrapper-basket-contact-info__label{
+
+	float: left;
+}
+.wrapper-basket-contact-info__label > label {
+	padding-bottom: 13px;
+	display: block;
+}
+.wrapper-basket-contact-info__btn{
+	text-align: right;
+	position: relative;
+	width: 73%;
+	min-width: 500px;
+	margin: 0 auto;
+	clear: both;
+}
+.basket-contact-info > input{
+ margin:0px 18px 18px 0px;
+}
+
+div.basket-contact-info input:nth-child(-n+4){
+	position: relative;
+	width: 46%;	
+	min-width: 180px;
+}
+div.basket-contact-info input:nth-child(n+5){
+	width: 29.5%;
+	min-width: 100px;
+}
+div.basket-contact-info input:nth-child(n+2):nth-child(-n+5):nth-child(even){
+	margin-right: 0px;
+}
+
+.basket-contact-info__caption{
+	font-size: 18px;
+	color: #020202;
+	padding: 117px 0 29px;
+}
