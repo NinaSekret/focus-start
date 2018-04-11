@@ -64,10 +64,10 @@ html,body{
 	padding: 45px 62px 63px 62px;
 	background-color: #ffffff;
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.18);
-
 }
 .app-pack{
 	padding-bottom: 62px;
+	overflow: hidden;
 }
 .app-pack__search{
 	float:right;
@@ -105,6 +105,7 @@ html,body{
 	clear: both;
 }
 .app-pack__icon-image{
+
 	display: inline-block;
 	padding: 26px 34 0 0;
 	margin-left: -2px;
@@ -116,6 +117,11 @@ html,body{
 }
 .app-pack__icon-image:last-child{
 	padding-right: 0;
+}
+.app-pack__icon{
+	display: flex;
+	flex-wrap: nowrap;
+	padding-left: 10px;
 }
 .time{
 	font-size: 16px;
@@ -141,6 +147,31 @@ html,body{
 	float: right;
 	padding:7px 5px;
 }
+.app-threads-type__arrow-slider-right{
+	position: relative;
+	text-align: right;
+	top: 200px;
+	left:20px;
+}
+.app-threads-type__arrow-slider-left{
+	position: relative;
+	top:190px;
+	right: 11px;
+}
+.app-pack__slider{
+	text-align: center;
+	padding: 0px 0px 20px 0px;
+}
+.app-pack__slider > div{
+	margin: 7px;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	background-color: grey;
+	display: inline-block;
+
+}
+
 .app-threads-type__arrow:after{
 	content: "";
 	display: block;
