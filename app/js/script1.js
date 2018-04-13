@@ -83,7 +83,7 @@ function setItems(objects)
 	var changeElem = document.getElementsByClassName("app-pack__icon")[0];  
 
 		
-	for (var i = 0; i < 3; i++) {
+	for (var i = 0; i < 9; i++) {
 		var randIndex = Math.floor(Math.random() * objects.length);	 
 		var element = createElementDiv(objects[randIndex]);
 		changeElem.appendChild(element);

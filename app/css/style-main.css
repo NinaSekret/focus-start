@@ -122,6 +122,8 @@ html,body{
 	display: flex;
 	flex-wrap: nowrap;
 	padding-left: 10px;
+	position: relative;
+	transition: all ease 1s;	
 }
 .time{
 	font-size: 16px;
@@ -154,13 +156,18 @@ html,body{
 	left:20px;
 }
 .app-threads-type__arrow-slider-left{
+
 	position: relative;
 	top:190px;
 	right: 11px;
 }
+
 .app-pack__slider{
 	text-align: center;
-	padding: 0px 0px 20px 0px;
+	padding: 20px 0px 20px 0px;
+}
+.app-pack__slider > div:hover{
+	background-color: blue;
 }
 .app-pack__slider > div{
 	margin: 7px;
