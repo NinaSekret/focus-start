@@ -1,63 +1,30 @@
-let objects = [
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/01.png",
-		name: "Pokemon № 01",
-		date: "01 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/02.png",
-		name: "Pokemon № 02",
-		date: "02 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/03.png",
-		name: "Pokemon № 03",
-		date: "03 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/04.png",
-		name: "Pokemon № 04",
-		date: "04 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/05.png",
-		name: "Pokemon № 05",
-		date: "05 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/06.png",
-		name: "Pokemon № 06",
-		date: "06 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/07.png",
-		name: "Pokemon № 07",
-		date: "07 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/08.png",
-		name: "Pokemon № 08",
-		date: "08 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/09.png",
-		name: "Pokemon № 09",
-		date: "09 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/10.png",
-		name: "Pokemon № 10",
-		date: "10 апреля 2018"
-	},
-	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/11.png",
-		name: "Pokemon № 11",
-		date: "11 апреля 2018"
-	}
-];
+import {objects} from './script3.js';
+var request = new XMLHttpRequest();
+request.open('GET','/api/app_packages.json',true);
+console.log(1);
+request.onreadystatechange = function() {
+	console.log(2);
+  if ((request.readyState==4) && (request.status==200)) {
+/*    console.log(request);
+    console.log(request.responseText);*/
+    	console.log(3);
+    	var objectParse = JSON.parse(request.responseText);
+    	createElementDiv();
+    	return objectParse;
+  }
+}; 
+
+		request.send();
+
+console.log(4);
+	var objectParse = request.onreadystatechange();
+	console.log(5);
+	console.log(objectParse);
 
 function createElementDiv(objectSettings)
-{
+{	
+
+
 	var div = document.createElement('div');
 	div.classList.toggle('app-pack__icon-image');
 

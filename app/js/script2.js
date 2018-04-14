@@ -1,3 +1,4 @@
+
 document.getElementById('slider-left').onclick = function () {
 	slidermMove(TO_LEFT);
 };
