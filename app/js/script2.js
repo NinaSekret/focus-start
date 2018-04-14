@@ -6,16 +6,13 @@ document.getElementById('slider-right').onclick = function () {
 	slidermMove(TO_RIGHT);
 };
 
-let allImagesInDiv = document.querySelector('#imgContainer').querySelectorAll('.app-pack__icon-image');
-
-//let allImagesInDiv = document.querySelector('#imgContainer').querySelectorAll('.app-pack__icon-image');
 let allDots = document.querySelectorAll('.app-pack__slider>div');
 const TO_LEFT = 1;
 const TO_RIGHT =-1;
 let left = 0;
 
 function slidermMove(direction){
-
+	let allImagesInDiv = document.querySelector('#imgContainer').querySelectorAll('.app-pack__icon-image');
 	let imgContainer = document.getElementById('imgContainer');
 	let leftPrepare = left + direction * 362;
 

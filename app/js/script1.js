@@ -1,30 +1,32 @@
-import {objects} from './script3.js';
-var request = new XMLHttpRequest();
-request.open('GET','/api/app_packages.json',true);
-console.log(1);
+import {objectsImages} from './script3.js';
+
+let request = new XMLHttpRequest();
+request.open('GET','/api/app_packages.json', true);
 request.onreadystatechange = function() {
-	console.log(2);
-  if ((request.readyState==4) && (request.status==200)) {
-/*    console.log(request);
-    console.log(request.responseText);*/
-    	console.log(3);
-    	var objectParse = JSON.parse(request.responseText);
-    	createElementDiv();
-    	return objectParse;
-  }
-}; 
+	if ((request.readyState==4) && (request.status==200)) {
+		var objectsDescriptions = JSON.parse(request.responseText);
+		let objects = [];
 
-		request.send();
 
-console.log(4);
-	var objectParse = request.onreadystatechange();
-	console.log(5);
-	console.log(objectParse);
+		for (var i = 0; i < objectsDescriptions.length; i++) {
+			for (var j = 0; j < objectsImages.length; j++) {
+				if (objectsDescriptions[i].guid == objectsImages[j].guid) {
+					objects.push({
+						img: objectsImages[j].img,
+						name: objectsDescriptions[i].name,
+						date: objectsDescriptions[i].date
+					});
+				}
+			}
+		}
+
+		setItems(objects);
+	}
+}
+request.send();
 
 function createElementDiv(objectSettings)
-{	
-
-
+{	console.log(objectSettings);
 	var div = document.createElement('div');
 	div.classList.toggle('app-pack__icon-image');
 
@@ -45,11 +47,12 @@ function createElementDiv(objectSettings)
 	return div;
 }
 
+
+
 function setItems(objects)
 {
 	var changeElem = document.getElementsByClassName("app-pack__icon")[0];  
 
-		
 	for (var i = 0; i < 9; i++) {
 		var randIndex = Math.floor(Math.random() * objects.length);	 
 		var element = createElementDiv(objects[randIndex]);
@@ -57,8 +60,5 @@ function setItems(objects)
 		objects.splice(randIndex,1);//что бы объекты не повторялись
 	}
 }
-
-setItems(objects);
-
 
 
