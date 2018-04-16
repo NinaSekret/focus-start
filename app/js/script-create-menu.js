@@ -16,7 +16,7 @@ function renderLeftMenu(appMenuItems)
 {
 	document.createElement('template');
 	let link;
-	let listItem =document.querySelector('#appNavTemplate');
+	let listItem = document.querySelector('#appNavTemplate');
 	for (var i = 0; i < appMenuItems.length; i++) {
 
 		link = listItem.content.querySelector('li>a');

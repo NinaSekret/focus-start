@@ -2,7 +2,7 @@
 	padding-bottom: 0px;
 }
 .wrapper-catalog-new-bank{
-	padding: 45px 0px 29px 42px;
+	padding: 45px 0px 23px 42px;
 }
 .catalog-new-bank__header{
 	width: 100%;
@@ -23,7 +23,10 @@
 }
 
 .catalog-new-bank__desc-required{
-	padding: 20px 0px 60px 0;
+	padding: 20px 0px 20px 0;
+}
+.catalog-new-bank__desc-prise{
+	padding-bottom: 20px;
 }
 .catalog-new-bank__desc-text{
 	color: #4f5659;
