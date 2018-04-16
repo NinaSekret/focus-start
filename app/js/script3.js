@@ -1,15 +1,15 @@
  export const objectsImages = [
 	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/01.png",
+		img: "/assets/img/shot-1.jpg",
 		guid: "e8b2f322-bda6-4b8e-947b-8ad5a7365ff4"
 
 	},
 	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/02.png",
+		img: "/assets/img/shot-2.jpg",
 		guid: "959e9100-7c08-4060-8be3-5684d6705b15"
 	},
 	{
-		img: "https://pokemonespace.com/jeux/xy/img/ingame/03.png",
+		img: "/assets/img/shot-3.jpg",
 		guid: "5acdadbb-e8da-42b8-b157-d79a40ac56be"
 	},
 	{
@@ -30,6 +30,24 @@
 	{
 		img: "https://pokemonespace.com/jeux/xy/img/ingame/07.png",
 		guid: "a559e2c5-1c8f-46ee-9493-c773f9073da8"
+
+	},
+	{
+		img: "https://pokemonespace.com/jeux/xy/img/ingame/08.png",
+		guid: "aafdb56d-6de9-455f-8e6e-a6bbc33ff03f"
+	},
+	{
+		img: "https://pokemonespace.com/jeux/xy/img/ingame/09.png",
+		guid: "135b251e-891d-4e0b-b954-74d5fd04425c"
+	},
+	{
+		img: "https://pokemonespace.com/jeux/xy/img/ingame/10.png",
+		guid: "c2359be5-bd4b-471e-a0f0-32e7adf3a9d6"
+
+	},
+	{
+		img: "https://pokemonespace.com/jeux/xy/img/ingame/11.png",
+		guid: "923e98ef-0ae9-4e0b-9385-d3b2ceddb0a9"
 
 	},
 	{

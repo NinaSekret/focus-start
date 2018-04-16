@@ -35,7 +35,8 @@ function createElementDiv(objectSettings)
 	div.appendChild(image);
 
 	var h4 = document.createElement('h4');
-	h4.classList.toggle('caption', 'caption--h4');
+	h4.classList.toggle('caption');
+	h4.classList.toggle('caption--h4');
 	h4.innerHTML = objectSettings.name;
 	div.appendChild(h4);
 
