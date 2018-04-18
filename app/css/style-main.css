@@ -39,13 +39,41 @@ html,body{
 	padding-left:40px;
 	color: #adafb2;
 	text-decoration: none;
+	vertical-align: top
+
 }
+.menu-component-basket{
+	height: 15px;
+	position: relative;
+	bottom: 7px;
+}
+.basket{
+	width: 30px;
+	height: 30px;
+}
+
+.basket-value{
+	position: relative;
+	bottom: 15px;
+	width: 17px;
+	height: 17px;
+	padding: 1px 0px 0px 5px;
+	border-radius: 50%;
+	background-color: red;
+	color: #fff;
+	font-size: 12px;
+
+
+}
+
 .menu{
 	padding:22px 0;
 	float:right;
 }
 .logo{
+	padding-top: px;
 	float:left;	
+
 }
 .logo > svg {
   width: 145px;
