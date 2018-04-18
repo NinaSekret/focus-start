@@ -1,16 +1,12 @@
 import {getSyncRaw} from './request-helper.js';
 
-let templatesCash = [];
+let templatesCash = {};
 
 export function getTemplate(path)
 {
-	console.log(templatesCash);
-	if (templatesCash.indexOf(path) == -1) {
-
-	console.log('addtoc');
+	if (templatesCash.hasOwnProperty(path) == false) {
 		templatesCash[path] = getSyncRaw(path);
 	}
 
-	console.log(templatesCash);
 	return templatesCash[path];
 } 

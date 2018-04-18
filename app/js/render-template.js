@@ -1,9 +1,6 @@
-//import {objectsImages} from './objects-images.js';
-
 export function renderTemplate(template, params) 
 {
 	console.log(params);
-	console.log(objectsImages);
 	let regex;
 
 	for (var key in params) {
@@ -17,12 +14,6 @@ export function renderTemplate(template, params)
 			regex = new RegExp('{\%' + key + '_' + i + '\%}', 'g');
 		  	template = template.replace(regex, params[key][i]);					
 		}
-
-		// for (let j = 0; j < objectsImages.length; j++) {
-	 //  		if (objectsImages[j].guid == params.guid){
-	 //  		template = template.replace(regex, objectsImages[j].img);
-	 //  		}	
-	 //  	}
 	}
 
 	return template;
