@@ -44,47 +44,52 @@
 				 	<td>		 		
 				 	</td>
 				</tr>
-				<tr class="basket-first-step__line">
-				 	<td>
-				 		<img class="basket-first-step__img" src="assets/img/shot-2.jpg">
-				 	</td>
-				 	<td>
-				 		<p class="basket-first-step__cell-name-app">Новый ЦФТ-Банк</p>
-					<label>
-						<input class="checkbox" type="checkbox" name="checkbox-active">
-						<span class="pseudo-item checkbox-custom"></span>
-						<span class="label">Установка и настройка</span>
-					</label>
-				 	</td>
-				 	<td>
-				 		<span class="basket-first-step__cell-cast">$139,99</span>
-				 	</td>
-				 	<td>
-						<div class="form-option">
-							<button class="form-option__btn">
-									<svg class="minus">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#minus"></use>
-									</svg>
-							</button>
-								<input type="text" placeholder="2" class="form-option__input">				
-							<button class="form-option__btn form-option__btn-right">
-									<svg class="plus">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plus"></use>
-									</svg>
-							</button>
-						</div>	
-				 	</td>
-	 			 	<td>
-	 			 		<span class="basket-first-step__cell-cast">$139,99</span>
-				 	</td>
-				 	<td>
-			 			<button class="button-delete" >
-					 		<svg class="delete" >
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delete"></use>
-							</svg>	
-				 		</button> 		
-				 	</td>
-				</tr>
+
+				<template id="render-template">
+					<tr class="basket-first-step__line">
+					 	<td>
+					 		<img class="basket-first-step__img" src="">
+					 	</td>
+					 	<td>
+					 		<p class="basket-first-step__cell-name-app">Новый ЦФТ-Банк</p>
+						<label>
+							<input class="checkbox" type="checkbox" name="checkbox-active">
+							<span class="pseudo-item checkbox-custom"></span>
+							<span class="label">Установка и настройка</span>
+						</label>
+					 	</td>
+					 	<td>
+					 		<span class="basket-first-step__cell-cast">139,99</span>
+					 	</td>
+					 	<td>
+							<div class="form-option">
+								<button class="form-option__btn">
+										<svg class="minus">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#minus"></use>
+										</svg>
+								</button>
+									<input type="text" placeholder="1" class="form-option__input">				
+								<button class="form-option__btn form-option__btn-right">
+										<svg class="plus">
+											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plus"></use>
+										</svg>
+								</button>
+							</div>	
+					 	</td>
+		 			 	<td>
+		 			 		<span class="basket-first-step__cell-cast">139,99</span>
+					 	</td>
+					 	<td>
+				 			<button class="button-delete">
+						 		<svg class="delete" >
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delete"></use>
+								</svg>	
+					 		</button> 		
+					 	</td>
+					</tr>
+				</template>
+
+	<!-- 			
 				<tr class="basket-first-step__line">
 				 	<td>
 				 		<img class="basket-first-step__img" src="assets/img/shot-2.jpg">
@@ -125,7 +130,7 @@
 						</svg>	
 				 		</button>
 				 	</td>
-				</tr>
+				</tr> -->
 			</table>
 		</div>
 		<div class="basket-first-step__buy">
@@ -133,6 +138,7 @@
 			<a href="basket-contact-info.html"><button class="button-size button-blue">ЗАКАЗАТЬ</button></a>
 		</div>
 	</section>
+	<script type="module" src="js/load-cart.js"></script>
 </body>
 
 	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
