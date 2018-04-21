@@ -60,6 +60,7 @@ export class Cart {
 	getItems() {
 		return this.items;
 	}
+	
 
 	saveItemsToLocalStorage() {
 		localStorage.setItem('cartItems', JSON.stringify(this.items));
@@ -90,4 +91,5 @@ export class Cart {
     		));	
 	    }
 	}
+
 }

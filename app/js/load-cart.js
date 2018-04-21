@@ -64,5 +64,19 @@ function removeCartItem(guid)
 	cartItemElement.remove();
 }
 
+function sumItem()
+{
+	let objPrise = document.querySelectorAll('.sumItem');
+	var totalSum=0;
+	
+	for(let i = 0; i < objPrise.length; i++){
+		let noDollar = parseInt(objPrise[i].innerHTML.substring(1));
+		
+		totalSum += noDollar;
+		
+	 }
+	 console.log(totalSum);
+}
 renderCart();
+sumItem();
 addRemoveHandlers();
