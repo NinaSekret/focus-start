@@ -13,6 +13,7 @@ function renderCart() {
 	let link;
 	let priceItem;
 	let priceTotal;
+	let priceAllElement;
 	let quantity;
 	let clone;
 	let castElements;
@@ -45,6 +46,9 @@ function renderCart() {
 		clone = document.importNode(listItem.content,true);
 		tr.appendChild(clone);
 	}
+	priceAllElement = document.querySelector('.basket-first-step__total-cost');
+	priceAllElement.innerHTML = '&#36;' + Cart.getInstance().getTotalSum();
+
 }
 
 function addRemoveHandlers()
@@ -64,19 +68,5 @@ function removeCartItem(guid)
 	cartItemElement.remove();
 }
 
-function sumItem()
-{
-	let objPrise = document.querySelectorAll('.sumItem');
-	var totalSum=0;
-	
-	for(let i = 0; i < objPrise.length; i++){
-		let noDollar = parseInt(objPrise[i].innerHTML.substring(1));
-		
-		totalSum += noDollar;
-		
-	 }
-	 console.log(totalSum);
-}
 renderCart();
-sumItem();
 addRemoveHandlers();

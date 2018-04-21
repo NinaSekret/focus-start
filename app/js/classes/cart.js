@@ -60,8 +60,13 @@ export class Cart {
 	getItems() {
 		return this.items;
 	}
-	
-
+	getTotalSum(){
+		let result = 0;
+		for (var i = 0; i < this.items.length; i++) {
+			result += this.items[i].getTotalPrice();	
+		}
+		return result;
+	}
 	saveItemsToLocalStorage() {
 		localStorage.setItem('cartItems', JSON.stringify(this.items));
 	}
