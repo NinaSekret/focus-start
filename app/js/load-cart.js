@@ -20,6 +20,8 @@ function renderCart() {
 	let deleteBtn;
 	let tr;
 	let currentTr;
+	let refreshInc;
+	let refreshDec; 
 
 	for (var i = 0; i < itemElemenets.length; i++) {
 		currentTr = listItem.content.querySelector('.basket-first-step__line');
@@ -41,13 +43,27 @@ function renderCart() {
 
 		deleteBtn = listItem.content.querySelector('.button-delete');
 		deleteBtn.dataset.guid = itemElemenets[i].guid;
+
+		refreshInc = listItem.content.querySelector('.form-option__btn-right');
+		refreshInc.dataset.guid = itemElemenets[i].guid;
+
+		refreshDec = listItem.content.querySelector('.form-option__btn-left');
+		refreshDec.dataset.guid = itemElemenets[i].guid;
 		
-		let tr = document.querySelector(".basket-first-step__table");
-		clone = document.importNode(listItem.content,true);
+		let tr = document.querySelector(".basket-first-step__table tbody");
+		clone = document.importNode(listItem.content, true);
 		tr.appendChild(clone);
 	}
 	priceAllElement = document.querySelector('.basket-first-step__total-cost');
 	priceAllElement.innerHTML = '&#36;' + Cart.getInstance().getTotalSum();
+
+
+
+
+	addRemoveHandlers();
+	refreshQuantity();
+	refreshTotalSum();
+	console.log('render');
 
 }
 
@@ -68,5 +84,58 @@ function removeCartItem(guid)
 	cartItemElement.remove();
 }
 
-renderCart();
-addRemoveHandlers();
+function refreshTotalSum()
+{
+	let refreshButtons = document.querySelectorAll('.button-delete, .form-option__btn-right, .form-option__btn-left');
+	for (var i = 0; i < refreshButtons.length; i++) {
+		refreshButtons[i].addEventListener('click', function() {
+			let priceAllElement = document.querySelector('.basket-first-step__total-cost');
+			priceAllElement.innerHTML = '&#36;' + Cart.getInstance().getTotalSum();	
+
+		});
+	}
+}
+
+function refreshQuantity()
+{
+	let refreshQuantityButtonInc = document.querySelectorAll('.form-option__btn-right');
+	let refreshQuantityButtonDec = document.querySelectorAll('.form-option__btn-left');
+
+		console.log(refreshQuantityButtonInc);
+
+	for (var i = 0; i < refreshQuantityButtonInc.length; i++) {
+		refreshQuantityButtonInc[i].addEventListener('click', function() {
+			Cart.getInstance().incItemQuantity(this.dataset.guid);
+			let quantity2 = Cart.getInstance().getItemEntityByGuid(this.dataset.guid).quantity;
+			let quantity = document.querySelector('.form-option__input');
+			quantity.setAttribute('placeholder', quantity2);
+			
+			
+			clearCartHtml();
+			renderCart();
+
+		});
+	}
+	for (var j = 0; j < refreshQuantityButtonDec.length; j++) {
+		refreshQuantityButtonDec[j].addEventListener('click', function() {
+			Cart.getInstance().decItemQuantity(this.dataset.guid);
+			let quantity1 = Cart.getInstance().getItemEntityByGuid(this.dataset.guid).quantity;
+			let quantity = document.querySelector('.form-option__input');
+			quantity.setAttribute('placeholder', quantity1);
+			
+
+			clearCartHtml();
+			renderCart();
+		});
+	}
+
+}
+
+function clearCartHtml() {
+	let tableRows = document.querySelectorAll('table .basket-first-step__line');
+	for (let i=0; i < tableRows.length; i++) {
+		tableRows[i].remove()
+	}
+}
+
+renderCart();//если вызвать раньше удаления элемента, то пересчет суммы будет работать не корректно

@@ -20,30 +20,29 @@ export class Cart {
 
 	static getInstance() {
 		if (!cartInstance) {
-			cartInstance = new Cart();
-			console.log('cart is created');
+			cartInstance = new Cart();			
 		}
 
-
-		console.log('cart is returned');
 		return cartInstance;
 	}
 
 	addItem(cartItem) {
-		let quantityIsInc = false;
+		let existItem = this.getItemEntityByGuid(cartItem.guid);
 
-		for (var i = 0; i < this.items.length; i++) {
-			if (cartItem.guid == this.items[i].guid){
-				this.items[i].incQuantity();
-				quantityIsInc = true;
-			}
-		}
-
-		if (!quantityIsInc) {
+		if (!existItem) {
 			this.items.push(cartItem);
+		} else {
+			existItem.incQuantity();
 		}
 		
 		this.saveItemsToLocalStorage();
+	}
+
+	incItemQuantity(guid){
+	   this.getItemEntityByGuid(guid).incQuantity();
+	}
+	decItemQuantity(guid){
+		this.getItemEntityByGuid(guid).decQuantity();
 	}
 
 	deleteItem(guid) {
@@ -60,6 +59,7 @@ export class Cart {
 	getItems() {
 		return this.items;
 	}
+
 	getTotalSum(){
 		let result = 0;
 		for (var i = 0; i < this.items.length; i++) {
@@ -67,6 +67,17 @@ export class Cart {
 		}
 		return result;
 	}
+
+	getItemEntityByGuid(guid) {
+		for (var i = 0; i < this.items.length; i++) {
+			if(guid == this.items[i].guid) {
+				return this.items[i];
+			}
+		}
+
+		return null;
+	}
+
 	saveItemsToLocalStorage() {
 		localStorage.setItem('cartItems', JSON.stringify(this.items));
 	}

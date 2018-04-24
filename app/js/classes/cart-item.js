@@ -14,4 +14,8 @@ export class CartItem {
 	incQuantity() {
 		this.quantity++;
 	}
+	
+	decQuantity() {
+		this.quantity--;
+	}
 }
