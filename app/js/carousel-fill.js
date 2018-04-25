@@ -4,22 +4,26 @@ import {getSyncJson} from './request-helper.js';
 function compileInfoObjects()
 {
 	let appsItemUrl;
-	let objectDescription;
-	let compileReuslt = [];
+	let promises = [];
 
 	for (let i = 0; i < objectsImages.length; i++) {
 		appsItemUrl = '/api/apps/' + objectsImages[i].guid + '.json';
-
-		objectDescription = getSyncJson(appsItemUrl);
-
-		compileReuslt.push({
-			img: objectsImages[i].img,
-			name: objectDescription.name,
-			date: objectDescription.date
-		});
+		promises.push(getSyncJson(appsItemUrl));
 	}
 
-	setItems(compileReuslt);
+	Promise.all(promises).then(function(promisesResults) {
+		let compileReuslt = [];
+
+		for (let i = 0; i < promisesResults.length; i++) {
+			compileReuslt.push({
+				img: objectsImages[i].img,
+				name: promisesResults[i].name,
+				date: promisesResults[i].date
+			});
+		}
+
+		setItems(compileReuslt);
+	});
 }
 
 function createElementDiv(objectSettings)

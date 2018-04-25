@@ -14,7 +14,7 @@ html,body{
 
 }
 .wrapper-basket{
-	padding: 60px 80px 130px 80px;
+	padding: 60px 80px 20px 80px;
 	max-width: 1280px;
 	min-width: 750px;
 	margin: 0 auto;
@@ -29,7 +29,9 @@ html,body{
 .credit-card{
 	width: 55%;
     margin: 0 auto; 
-    min-width: 590px
+    min-width: 590px;
+    height: 450px;
+
 }
 .form-credit-card{
 	position: relative;
@@ -40,13 +42,13 @@ html,body{
 }
 .form-credit-card__main-window{
 	background-color: #ffffff;
-	top: 154px;
+	top: 62px;
 	z-index: 3;
 	padding: 32px 32px 30px 25px;
 
 }
 .form-credit-card__secondary-window{
-	bottom: 65px;
+	bottom: 138px;
 	left: 115px;
 	z-index: 1;
 	background-color: #fafafa;

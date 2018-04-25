@@ -5,15 +5,29 @@
 	<link rel="stylesheet" type="text/css" href="css/ui.kit.css">
     <link rel="stylesheet" type="text/css" href="css/basket-credit-card.css">
     <link rel="stylesheet" type="text/css" href="css/basket-contact-info.css">
+    <link rel="stylesheet" type="text/css" href="css/tri.css">
 </head>
 <body>
+	<div class="container disabled">
+		<div class='triangles'>
+			<div class='tri invert'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+		</div>
+	</div>
 	<section class="wrapper-basket " >
 		<div class="wrapper-basket-timeline">								
-			<div class="timeline-step timeline-step--check"> 
+			<a data-step="1" class="hrefPreviousStep" href="#"><div class="timeline-step timeline-step--check"> 
 				<svg class="path">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path"></use>
 				</svg>
-			</div>
+			</div></a>
 			<div class="timeline-arrow timeline-arrow--active"></div>
 			<div class="timeline-step timeline-step--active">
 				<div class="timeline-step__text"><p>2</p></div>
@@ -53,10 +67,10 @@
 	            </label>
 			</div>
 			<div class="wrapper-basket-contact-info__btn">
-				<a href="basket-credit-card.html"><button class="button-size button-blue ">ОТПРАВИТЬ</button></a>	
+				<button data-step="1" href="#" class="button-size button-blue hrefNextStep">ОТПРАВИТЬ</button>	
 			</div>
 	</section>	
-
+	<script type="module" src="js/order-form-wizard.js"></script>
 
 </body>
 	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" >

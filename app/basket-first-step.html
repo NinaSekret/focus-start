@@ -5,8 +5,22 @@
 	<link rel="stylesheet" type="text/css" href="css/ui.kit.css">
 	<link rel="stylesheet" type="text/css" href="css/basket-credit-card.css">
     <link rel="stylesheet" type="text/css" href="css/basket-first-step.css">
+    <link rel="stylesheet" type="text/css" href="css/tri.css">
 </head>
 <body>
+	<div class="container disabled">
+		<div class='triangles'>
+			<div class='tri invert'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+		</div>
+	</div>
 	<section class="wrapper-basket">
 		<div class="wrapper-basket-timeline">								
 			<div class="timeline-step timeline-step--active">
@@ -92,10 +106,11 @@
 		</div>
 		<div class="basket-first-step__buy">
 			<span class="basket-first-step__total-cost"></span>
-			<a href="basket-contact-info.html"><button class="button-size button-blue">ЗАКАЗАТЬ</button></a>
+			<button data-step="0" href="#" class="button-size button-blue hrefNextStep">ЗАКАЗАТЬ</button>
 		</div>
 	</section>
 	<script type="module" src="js/load-cart.js"></script>
+	<script type="module" src="js/order-form-wizard.js"></script>
 </body>
 
 	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">

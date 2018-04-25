@@ -5,14 +5,20 @@ import {objectsImages} from './objects-images.js';
 
 // TODO delete this
 import {Cart} from './classes/cart.js';
-//Cart.getInstance();
 import {CartItem} from './classes/cart-item.js'
 
 
 export function loadPage(appGuid, templatePath)
 {
 	let appsItemUrl = '/api/apps/' + appGuid + '.json';
-	let objectDescription = getSyncJson(appsItemUrl);
+
+	getSyncJson(appsItemUrl).then(function (response) 
+	{
+		test(response, appGuid, templatePath);
+	});
+}
+
+function test(objectDescription, appGuid, templatePath){
 	let template = getTemplate(templatePath);
 
 	//добавление ссылки на картинку в парамс
@@ -32,9 +38,5 @@ export function loadPage(appGuid, templatePath)
 		Cart.getInstance().addItem(cartItem);
 		return false;
 	}
-}
-
-function test(){
-
 }
 

@@ -4,21 +4,35 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/ui.kit.css">
     <link rel="stylesheet" type="text/css" href="css/basket-credit-card.css">
+    <link rel="stylesheet" type="text/css" href="css/tri.css">
 </head>
 <body>
+	<div class="container disabled">
+		<div class='triangles'>
+			<div class='tri invert'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+			<div class='tri'></div>
+			<div class='tri invert'></div>
+		</div>
+	</div>
 	<section class="wrapper-basket">
 		<div class="wrapper-basket-timeline">								
-			<div class="timeline-step timeline-step--check"> 
+			<a data-step="2" class="hrefFirstStep" href="#"><div class="timeline-step timeline-step--check"> 
 				<svg class="path">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path"></use>
 				</svg>
-			</div>
+			</div></a>
 			<div class="timeline-arrow timeline-arrow--active"></div>
-			<div class="timeline-step timeline-step--check">
+			<a data-step="2" class="hrefPreviousStep" href="#"><div class="timeline-step timeline-step--check">
 				<svg class="path">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path"></use>
 				</svg>
-			</div>
+			</div></a>
 			<div class="timeline-arrow timeline-arrow--active"></div>
 			<div class="timeline-step timeline-step--active">
 				<div class="timeline-step__text"><p>3</p></div>
@@ -55,10 +69,11 @@
 			</div>
 		</div>
 			<div class="wrapper-basket-credit-card-button">
-				<a href="basket-first-step.html"><button class="button-size button-white form-credit-card__button-white">КОРЗИНА</button></a>
-				<a href="basket-finish.html"><button class="button-size button-blue form-credit-card__button-blue">ОПЛАТИТЬ</button></a>					
+				<button href="#" data-step="2" class="button-size button-white form-credit-card__button-white hrefFirstStep">КОРЗИНА</button>
+				<button href="#" data-step="2" class="button-size button-blue form-credit-card__button-blue hrefNextStep">ОПЛАТИТЬ</button>					
 			</div>
 	</section>
+	<script type="module" src="js/order-form-wizard.js"></script>
 </body>
 
 	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" >
